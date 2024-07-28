@@ -1,0 +1,21 @@
+---
+// import { getCollection } from "astro:content";
+import Title from "./parts/Title.astro";
+
+// TODO: blogs implementation
+// const blogs = await getCollection("blogs");
+---
+
+<div class="max-laptop:pt-8">
+  <Title href="/blog" text="Latest Posts" />
+  <!-- {
+    allPosts.map(({ date, title, slug }, i) => (
+      <React.Fragment key={i}>
+        <InfoItem class="before:content-['☞'] before:text-primary pt-4 cursor-pointer max-w-fit hover:text-secondary transition before:dark:text-white">
+          <Link href={`blog/${slug}`}>&nbsp;{title}</Link>
+        </InfoItem>
+        <InfoItem class="text-sm">{date}</InfoItem>
+      </React.Fragment>
+    ))
+  } -->
+</div>

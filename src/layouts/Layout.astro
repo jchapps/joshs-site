@@ -1,28 +1,41 @@
 ---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="en" class="text-primary">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-white dark:text-white dark:bg-primary">
+    <section class="h-screen overflow-hidden relative">
+      <div class="bg-repeat w-full h-full">
+        <div class="m-auto w-3/5 h-screen flex flex-col overflow-auto">
+          <Header />
+          <div class="grid grid-cols-2 max-laptop:grid-cols-1 gap-x-5">
+            <slot />
+          </div>
+          <Footer />
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
+  :root {
+    /* --accent: 136, 58, 234;
 		--accent-light: 224, 204, 250;
 		--accent-dark: 49, 10, 101;
 		--accent-gradient: linear-gradient(
@@ -30,15 +43,16 @@ const { title } = Astro.props;
 			rgb(var(--accent)),
 			rgb(var(--accent-light)) 30%,
 			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
+		); */
+  }
+  html {
+    /* font-family: system-ui, sans-serif;
 		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
+		background-size: 224px; */
+    font-size: 12px;
+  }
+  code {
+    /* font-family:
 			Menlo,
 			Monaco,
 			Lucida Console,
@@ -46,6 +60,6 @@ const { title } = Astro.props;
 			DejaVu Sans Mono,
 			Bitstream Vera Sans Mono,
 			Courier New,
-			monospace;
-	}
+			monospace; */
+  }
 </style>
