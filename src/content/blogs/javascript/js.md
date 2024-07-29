@@ -1,7 +1,7 @@
 ---
 title: "JavaScript musings"
 date: "2024-05-01"
-slug: "callstack-and-queues"
+# slug: "callstack-and-queues"
 blurb: "Reflections on things I read about run time JS"
 ---
 
