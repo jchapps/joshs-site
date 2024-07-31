@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import Title from "./parts/Title.astro";
+import Title from "./parts/Link.astro";
 
 // TODO: blogs implementation
 const blogs = await getCollection("blogs");
@@ -10,10 +10,13 @@ const blogs = await getCollection("blogs");
   <Title href="/blogs" text="Latest Posts" />
   {
     blogs.map((blog) => (
-      <div>
-        <p class="pt-4 cursor-pointer max-w-fit hover:text-secondary transition ">
-          <a href={`blog/${blog.id}`}>{blog.data.title}</a>
-        </p>
+      <div class="mt-5">
+        <a
+          href={`blog/${blog.id}`}
+          class="cursor-pointer max-w-fit hover:text-secondary transition text-2xl"
+        >
+          {blog.data.title}
+        </a>
         <p class="text-sm">{blog.data.date}</p>
       </div>
     ))
