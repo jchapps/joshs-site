@@ -24,9 +24,7 @@ const { title } = Astro.props;
       <div class="bg-repeat w-full h-full">
         <div class="m-auto w-3/5 h-screen flex flex-col overflow-auto">
           <Header />
-          <div class="grid grid-cols-2 max-laptop:grid-cols-1 gap-x-5">
-            <slot />
-          </div>
+          <slot />
           <Footer />
         </div>
       </div>
@@ -34,32 +32,15 @@ const { title } = Astro.props;
   </body>
 </html>
 <style is:global>
-  :root {
-    /* --accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		); */
+  @font-face {
+    font-family: "Poppins";
+    src: url("../../static/fonts/poppins-regular.ttf") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
   }
   html {
-    /* font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px; */
     font-size: 12px;
-  }
-  code {
-    /* font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace; */
+    font-family: "Poppins", sans-serif;
   }
 </style>
