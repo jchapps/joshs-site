@@ -6,10 +6,11 @@ export default {
   theme: {
     colors: {
       primary: "#606676",
-      secondary: "#FEF3E2",
+      // TODO: Do I want this ?
+      secondary: "#478980",
+      // white: "#E7F0DC" // nice
       effect: "#399918",
       white: "#F6FFF8",
-      // white: "#E7F0DC" // nice
     },
     screens: {
       laptop: "717px",
