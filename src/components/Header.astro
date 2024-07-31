@@ -1,6 +1,4 @@
 ---
-import Divider from "./Divider.astro";
-
 const { pathname } = Astro.url;
 
 const active = "/" === pathname;
@@ -39,4 +37,4 @@ const navs = [
     }
   </div>
 </header>
-<Divider />
+<hr class="rounded-md text-primary dark:text-white border mb-8" />
